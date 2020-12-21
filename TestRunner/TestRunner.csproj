@@ -52,17 +52,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NUnitTestRunner.cs" />
+    <Compile Include="output.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="output.xsc">
+      <DependentUpon>output.xsd</DependentUpon>
+    </None>
+    <None Include="output.xsd" />
+    <None Include="output.xss">
+      <DependentUpon>output.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SampleLib.Tests\SampleLib.Tests.csproj">
-      <Project>{bfe68117-3f3f-4e5c-b2ca-7d96ea5f8ad4}</Project>
-      <Name>SampleLib.Tests</Name>
-    </ProjectReference>
+    <Content Include="output.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

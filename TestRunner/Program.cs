@@ -10,19 +10,9 @@ namespace TestRunner
     {
         static void Main(string[] args)
         {
-            // Get an interface to the engine
-            ITestEngine engine = TestEngineActivator.CreateInstance();
+            NUnitTestRunner runner = new NUnitTestRunner();
 
-            // Create a simple test package - one assembly, no special settings
-            TestPackage package = new TestPackage("SampleLib.Tests.dll");
-
-            // Get a runner for the test package
-            ITestRunner runner = engine.GetRunner(package);
-
-            // Run all the tests in the assembly
-            XmlNode testResult = runner.Run(null, TestFilter.Empty);
-
-            Console.WriteLine(testResult.OuterXml);
+            runner.Perform("SampleLib.Tests.dll");
 
             Console.ReadLine();
         }

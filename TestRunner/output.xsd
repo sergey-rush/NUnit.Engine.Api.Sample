@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="test-suite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="test-case" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="id" type="xs:string" />
+            <xs:attribute name="name" type="xs:string" />
+            <xs:attribute name="fullname" type="xs:string" />
+            <xs:attribute name="methodname" type="xs:string" />
+            <xs:attribute name="classname" type="xs:string" />
+            <xs:attribute name="runstate" type="xs:string" />
+            <xs:attribute name="seed" type="xs:string" />
+            <xs:attribute name="result" type="xs:string" />
+            <xs:attribute name="start-time" type="xs:string" />
+            <xs:attribute name="end-time" type="xs:string" />
+            <xs:attribute name="duration" type="xs:string" />
+            <xs:attribute name="asserts" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="test-suite" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="environment" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="framework-version" type="xs:string" />
+            <xs:attribute name="clr-version" type="xs:string" />
+            <xs:attribute name="os-version" type="xs:string" />
+            <xs:attribute name="platform" type="xs:string" />
+            <xs:attribute name="cwd" type="xs:string" />
+            <xs:attribute name="machine-name" type="xs:string" />
+            <xs:attribute name="user" type="xs:string" />
+            <xs:attribute name="user-domain" type="xs:string" />
+            <xs:attribute name="culture" type="xs:string" />
+            <xs:attribute name="uiculture" type="xs:string" />
+            <xs:attribute name="os-architecture" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="settings" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="setting" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="name" type="xs:string" />
+                  <xs:attribute name="value" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="properties" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="property" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="name" type="xs:string" />
+                  <xs:attribute name="value" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="type" type="xs:string" />
+      <xs:attribute name="id" type="xs:string" />
+      <xs:attribute name="name" type="xs:string" />
+      <xs:attribute name="fullname" type="xs:string" />
+      <xs:attribute name="classname" type="xs:string" />
+      <xs:attribute name="runstate" type="xs:string" />
+      <xs:attribute name="testcasecount" type="xs:string" />
+      <xs:attribute name="result" type="xs:string" />
+      <xs:attribute name="start-time" type="xs:string" />
+      <xs:attribute name="end-time" type="xs:string" />
+      <xs:attribute name="duration" type="xs:string" />
+      <xs:attribute name="total" type="xs:string" />
+      <xs:attribute name="passed" type="xs:string" />
+      <xs:attribute name="failed" type="xs:string" />
+      <xs:attribute name="warnings" type="xs:string" />
+      <xs:attribute name="inconclusive" type="xs:string" />
+      <xs:attribute name="skipped" type="xs:string" />
+      <xs:attribute name="asserts" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="test-run">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="command-line" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+        <xs:element ref="test-suite" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string" />
+      <xs:attribute name="name" type="xs:string" />
+      <xs:attribute name="fullname" type="xs:string" />
+      <xs:attribute name="runstate" type="xs:string" />
+      <xs:attribute name="testcasecount" type="xs:string" />
+      <xs:attribute name="result" type="xs:string" />
+      <xs:attribute name="total" type="xs:string" />
+      <xs:attribute name="passed" type="xs:string" />
+      <xs:attribute name="failed" type="xs:string" />
+      <xs:attribute name="inconclusive" type="xs:string" />
+      <xs:attribute name="skipped" type="xs:string" />
+      <xs:attribute name="asserts" type="xs:string" />
+      <xs:attribute name="engine-version" type="xs:string" />
+      <xs:attribute name="clr-version" type="xs:string" />
+      <xs:attribute name="start-time" type="xs:string" />
+      <xs:attribute name="end-time" type="xs:string" />
+      <xs:attribute name="duration" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="test-suite" />
+        <xs:element ref="test-run" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
