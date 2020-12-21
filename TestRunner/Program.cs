@@ -12,7 +12,8 @@ namespace TestRunner
         {
             NUnitTestRunner runner = new NUnitTestRunner();
 
-            runner.Perform("SampleLib.Tests.dll");
+            TestRun testRun =  runner.Perform("SampleLib.Tests.dll");
+            List<TestCase> testCases = runner.GetTestCaseList(testRun);
 
             Console.ReadLine();
         }
