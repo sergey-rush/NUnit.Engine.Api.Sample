@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnit.Engine" Version="3.11.1" />
+    <PackageReference Include="NUnit.Engine.Api" Version="3.11.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ActionLib.Tests\ActionLib.Tests.csproj" />
+  </ItemGroup>
+
+</Project>
